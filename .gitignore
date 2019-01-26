@@ -1,0 +1,10 @@
+.idea/
+node_modules
+logs
+coverage
+memstats
+.env
+.tern-project
+*.vim
+*.log
+*.zip

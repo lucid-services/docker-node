@@ -1,0 +1,9 @@
+.git
+.idea
+.vscode
+config
+logs
+node_modules
+*.vim
+.tern-project
+npm-debug.log
