@@ -10,7 +10,7 @@ RUN apk update  \
 #required by ./wait-for-it.sh && sqitch
 &&  apk add --no-cache bash perl \
 #https://github.com/sqitchers/sqitch
-&&  cpan App::Sqitch \
+&&  cpan DateTime IPC::System::Simple App::Sqitch \
 &&  apk del build-deps
 
 COPY . .
