@@ -1,4 +1,4 @@
-FROM node:current-alpine
+FROM node:lts-alpine
 
 WORKDIR /
 
@@ -11,6 +11,10 @@ RUN apk update  \
 &&  apk add --no-cache bash perl \
 #https://github.com/sqitchers/sqitch
 &&  cpan DateTime IPC::System::Simple App::Sqitch \
+&&  rm -rf /root/.cpan/build/* \
+       /root/.cpan/sources/authors/id \
+       /root/.cpan/cpan_sqlite_log.* \
+       /tmp/cpan_install_*.txt \
 &&  apk del build-deps
 
 COPY . .
